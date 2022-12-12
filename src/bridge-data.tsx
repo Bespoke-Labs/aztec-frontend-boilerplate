@@ -10,7 +10,7 @@ export async function fetchBridgeData() {
     "https://aztec-connect-testnet-eth-host.aztec.network:8545"
   );
   const testnetAddress = EthAddress.fromString(
-    "0xa33b20ba45ca9c265bbf7b35a75717590edfc868"
+    "0x5b2989bc33f19bfac4bcaad4e1795e2501edd5a3"
   );
   const dataProvider = DataProviderWrapper.create(
     provider,
