@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import {
   DataProviderWrapper,
   BridgeData,
-} from "@aztec/bridge-clients/client-dest/src/client/aztec/data-provider/DataProvider.js";
+} from "./bridge-clients/client/aztec/data-provider/DataProvider.js";
 import { EthAddress, JsonRpcProvider } from "@aztec/sdk";
 
 export async function fetchBridgeData() {
