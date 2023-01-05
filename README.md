@@ -35,6 +35,7 @@ See [App.tsx](src/App.tsx) for more details.
 
 - Install [Node.js](https://nodejs.org/en/download/)
 - Install [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+- Install [docker](https://docs.docker.com/get-docker/)
 
 ## Commands
 
@@ -55,6 +56,10 @@ Builds the app for production to the `build` folder.
 It bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
 
 See the [deployment](https://facebook.github.io/create-react-app/docs/deployment) section of the Create React App documentation for more details.
+
+### `yarn devnet`
+
+Starts a local ethereum network, deploys the aztec contracts and runs a local aztec sequencer.
 
 ## Learn More
 
