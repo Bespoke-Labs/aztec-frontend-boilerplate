@@ -65,7 +65,7 @@ const App = () => {
 
       // Initialize SDK
       const sdk = await createAztecSdk(ethereumProvider, {
-        serverUrl: "https://api.aztec.network/aztec-connect-testnet/falafel", // Testnet
+        serverUrl: "http://localhost:8081", // local devnet, run `yarn devnet` to start
         pollInterval: 1000,
         memoryDb: true,
         debug: "bb:*",
@@ -125,16 +125,12 @@ const App = () => {
         spendingSigner!.getPublicKey(),
         "eth",
         depositTokenQuantity,
-        TxSettlementTime.NEXT_ROLLUP,
+        TxSettlementTime.INSTANT,
         ethAccount!,
         sdk!
       );
 
-      console.log("Registration TXID:", txId);
-      console.log(
-        "View TX on Explorer:",
-        `https://aztec-connect-testnet-explorer.aztec.network/tx/${txId.toString()}`
-      );
+      console.log("Registration TXID:", txId.toString());
       setTxId(txId);
     } catch (e) {
       console.log(e); // e.g. Reject TX
@@ -151,15 +147,11 @@ const App = () => {
         ethAccount!,
         accountPublicKey!,
         depositTokenQuantity,
-        TxSettlementTime.NEXT_ROLLUP,
+        TxSettlementTime.INSTANT,
         sdk!
       );
 
-      console.log("Deposit TXID:", txId);
-      console.log(
-        "View TX on Explorer:",
-        `https://aztec-connect-testnet-explorer.aztec.network/tx/${txId.toString()}`
-      );
+      console.log("Deposit TXID:", txId.toString());
       setTxId(txId);
     } catch (e) {
       console.log(e); // e.g. depositTokenQuantity = 0
@@ -182,15 +174,11 @@ const App = () => {
         undefined,
         undefined,
         1e18, // Min acceptable amount of stETH per ETH
-        TxSettlementTime.NEXT_ROLLUP,
+        TxSettlementTime.INSTANT,
         sdk!
       );
 
-      console.log("Bridge TXID:", txId);
-      console.log(
-        "View TX on Explorer:",
-        `https://aztec-connect-testnet-explorer.aztec.network/tx/${txId.toString()}`
-      );
+      console.log("Bridge TXID:", txId.toString());
       setTxId(txId);
     } catch (e) {
       console.log(e); // e.g. fromAmount > user's balance
@@ -207,14 +195,14 @@ const App = () => {
       ),
       ", wstETH -",
       sdk!.fromBaseUnits(
-        await sdk!.getBalance(account0!.id, sdk!.getAssetIdBySymbol("wsteth"))
+        await sdk!.getBalance(account0!.id, 2)
       )
     );
   }
   
   async function logBridges() {
     const bridges = await fetchBridgeData();
-    console.log("Known bridges on Testnet:", bridges);
+    console.log("Known bridges on local testnet:", bridges);
   }
 
   return (
@@ -282,11 +270,6 @@ const App = () => {
             {txId ? (
               <div>
                 Last TX: {txId.toString()}{" "}
-                <a
-                  href={`https://aztec-connect-testnet-explorer.aztec.network/tx/${txId.toString()}`}
-                >
-                  (View on Explorer)
-                </a>
               </div>
             ) : (
               ""

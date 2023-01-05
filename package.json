@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@aztec/sdk": "2.1.0-testnet.89",
+    "@aztec/sdk": "2.1.72",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -23,7 +23,9 @@
     "start": "react-app-rewired start",
     "build": "CI=false && react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "devnet": "curl -s https://gist.githubusercontent.com/critesjosh/4e9575148043b6041a6f3e44aedb8780/raw/80bd0336b6bc55999f886397d6d42ceca7100f5e/docker-compose.dev.yml | docker-compose -f - up --force-recreate",
+    "mainnet-fork": "curl -s https://gist.githubusercontent.com/critesjosh/6b471bc776def8ab54fe336cb8199b23/raw/008bb25f840e760b67cfec98c10a1f61a4bb37c6/docker-compose.fork.yml | CHAIN_ID=3567 docker-compose -f - up --force-recreate"
   },
   "eslintConfig": {
     "extends": [
