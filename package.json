@@ -24,8 +24,8 @@
     "build": "CI=false && react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "devnet": "curl -s https://gist.githubusercontent.com/critesjosh/4e9575148043b6041a6f3e44aedb8780/raw/80bd0336b6bc55999f886397d6d42ceca7100f5e/docker-compose.dev.yml | docker-compose -f - up --force-recreate",
-    "mainnet-fork": "curl -s https://gist.githubusercontent.com/critesjosh/6b471bc776def8ab54fe336cb8199b23/raw/008bb25f840e760b67cfec98c10a1f61a4bb37c6/docker-compose.fork.yml | CHAIN_ID=3567 docker-compose -f - up --force-recreate"
+    "devnet": "curl -s https://raw.githubusercontent.com/AztecProtocol/dev-rel/main/docker-compose.dev.yml | docker-compose -f - up --force-recreate",
+    "mainnet-fork": "curl -s https://raw.githubusercontent.com/AztecProtocol/dev-rel/main/docker-compose.fork.yml | CHAIN_ID=3567 docker-compose -f - up --force-recreate"
   },
   "eslintConfig": {
     "extends": [
