@@ -61,6 +61,16 @@ See the [deployment](https://facebook.github.io/create-react-app/docs/deployment
 
 Starts a local ethereum network, deploys the aztec contracts and runs a local aztec sequencer.
 
+If you run into this error:
+
+```
+Rollup not found for merkle root: 232e56c264cf93ac066440084035de11fa28faf0e2e76bc806c501d988a1b055
+```
+
+try clearing your site data in the Application tab of developer tools.
+
+![clear data](./public/clear-data.png)
+
 ## Learn More
 
 To learn more about the Aztec SDK, visit the [Aztec Docs](https://docs.aztec.network/category/sdk).

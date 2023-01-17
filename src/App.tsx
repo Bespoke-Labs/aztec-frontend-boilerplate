@@ -66,13 +66,14 @@ const App = () => {
       // Initialize SDK
       const sdk = await createAztecSdk(ethereumProvider, {
         serverUrl: "http://localhost:8081", // local devnet, run `yarn devnet` to start
-        pollInterval: 1000,
+        pollInterval: 2000,
         memoryDb: true,
         debug: "bb:*",
         flavour: SdkFlavour.PLAIN,
         minConfirmation: 1, // ETH block confirmations
       });
       await sdk.run();
+      await sdk.awaitSynchronised();
       console.log("Aztec SDK initialized:", sdk);
       setSdk(sdk);
 
@@ -142,6 +143,8 @@ const App = () => {
       const depositTokenQuantity: bigint = ethers.utils
         .parseEther(amount.toString())
         .toBigInt();
+
+      console.log(ethAccount!, accountPublicKey!, depositTokenQuantity, sdk)
 
       let txId = await depositEthToAztec(
         ethAccount!,
