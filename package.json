@@ -24,8 +24,7 @@
     "build": "CI=false && react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "devnet": "curl -s https://raw.githubusercontent.com/AztecProtocol/dev-rel/main/docker-compose.dev.yml | docker-compose -f - up --force-recreate",
-    "mainnet-fork": "curl -s https://raw.githubusercontent.com/AztecProtocol/dev-rel/main/docker-compose.fork.yml | CHAIN_ID=3567 docker-compose -f - up --force-recreate"
+    "devnet": "curl -s https://raw.githubusercontent.com/AztecProtocol/dev-rel/main/docker-compose.dev.yml | docker-compose -f - up --force-recreate"
   },
   "eslintConfig": {
     "extends": [
