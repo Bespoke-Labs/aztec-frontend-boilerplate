@@ -24,10 +24,10 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
-"@aztec/barretenberg@2.1.76":
-  version "2.1.76"
-  resolved "https://registry.yarnpkg.com/@aztec/barretenberg/-/barretenberg-2.1.76.tgz#6a8b06ee04e01ce5221fe092567ffb16c327bd84"
-  integrity sha512-bpbB68fCcehz14RG9PSTJ06oFivruEM+U58/vW/XSHqMXj+i0T1jxEOD6vZZYXakHlm1iD/CLg8URmHlrWXfhA==
+"@aztec/barretenberg@2.1.81":
+  version "2.1.81"
+  resolved "https://registry.yarnpkg.com/@aztec/barretenberg/-/barretenberg-2.1.81.tgz#07f2d17f981411670d21835b691ef7abbd18c3a6"
+  integrity sha512-lhinpTO2a60JWDBtyViKuAunbUkhoUJA76PgBoyKCIPk7mMaRbvLZHRCH6Qwm1Dr8Lg72PE+IbAd4bc4nmjd6w==
   dependencies:
     "@types/levelup" "^4.3.0"
     browserify-cipher "^1.0.1"
@@ -44,12 +44,12 @@
     supports-color "7.2.0"
     tslib "^2.0.0"
 
-"@aztec/blockchain@2.1.76":
-  version "2.1.76"
-  resolved "https://registry.yarnpkg.com/@aztec/blockchain/-/blockchain-2.1.76.tgz#ae03c553d793c31e4d633609d6e8c74fe88a5861"
-  integrity sha512-ay9J3dQyaj+sXVZc4mz1TIWC0RiMR54YSQD1gdAhAHKdbE42Z+Zd57na39/RamLobdJCENmHxH3IwwpiWKF06g==
+"@aztec/blockchain@2.1.81":
+  version "2.1.81"
+  resolved "https://registry.yarnpkg.com/@aztec/blockchain/-/blockchain-2.1.81.tgz#45e8b31279e31c4e4aa2f2a2887112797502be4f"
+  integrity sha512-Hzrq0A3KYyWJTNKO2rdTwT1qGRZhJVmTNOxxXk0aSnt2DVXuJbnFbFDkHHY5AYv13DzvgoZZUqEzGAGyrn1RmA==
   dependencies:
-    "@aztec/barretenberg" "2.1.76"
+    "@aztec/barretenberg" "2.1.81"
     "@ethersproject/abi" "5.5.0"
     "@ethersproject/abstract-provider" "5.5.1"
     "@ethersproject/contracts" "5.5.0"
@@ -60,15 +60,14 @@
     cross-fetch "^3.1.5"
     debug "^4.3.4"
     ethers "5.5.1"
-    sha3 "^2.1.4"
 
-"@aztec/sdk@2.1.76":
-  version "2.1.76"
-  resolved "https://registry.yarnpkg.com/@aztec/sdk/-/sdk-2.1.76.tgz#07b6c90a762397ee207826b544d0b05f60199aae"
-  integrity sha512-1i7mYYi5UwWVxUJQY2SDNnagT9+/ehs1erYpG6sQAdG/xBs+YZBkfQ9+LxySGVlogT2MqNHCRSctFQBNa9SSwQ==
+"@aztec/sdk@2.1.81":
+  version "2.1.81"
+  resolved "https://registry.yarnpkg.com/@aztec/sdk/-/sdk-2.1.81.tgz#f17c83b4582e934cd688bbe91250735ceb794b6c"
+  integrity sha512-WM85oaO571mn4BwfLXZ1+ngCw75e4O88qgOi/aIWZQvhYixH9k+WOBesF0y+FpRRVf/6c+DlbzIPra7wewUGjA==
   dependencies:
-    "@aztec/barretenberg" "2.1.76"
-    "@aztec/blockchain" "2.1.76"
+    "@aztec/barretenberg" "2.1.81"
+    "@aztec/blockchain" "2.1.81"
     detect-node "^2.1.0"
     dexie "3.0.1"
     events "^3.3.0"
@@ -9980,7 +9979,7 @@ sha.js@^2.4.0, sha.js@^2.4.11:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-sha3@^2.1.3, sha3@^2.1.4:
+sha3@^2.1.3:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/sha3/-/sha3-2.1.4.tgz#000fac0fe7c2feac1f48a25e7a31b52a6492cc8f"
   integrity sha512-S8cNxbyb0UGUM2VhRD4Poe5N58gJnJsLJ5vC7FYWGUmGhcsj4++WaIOBFVDxlG0W3To6xBuiRh+i0Qp2oNCOtg==
